@@ -17,10 +17,10 @@ class HelloHandler(webapp2.RequestHandler):
     template = jinja_environment.get_template('templates/hello.html')
     self.response.out.write(template.render(template_vars))
 ```
-Every time we call render(), we can pass it a dictionary of values as an argument. The Python code gets and possible manipulates the variable and then it is passed to the template using render().
+Every time we call render(), we can pass it a dictionary of values as an argument. The Python code gets and possibly manipulates the variable. Then the variable is passed to the template using the .render() function.
 
 
-### Getting Data from the Request
+## Getting Data from the Request
 
 We’ve made our HelloWorld webapp a little smarter, because we can pass it a dictionary of key-value pairs and use them in the template. But right now that key:value pair is hardcoded in our handler. Instead, let's get the data from the user.
 
@@ -61,7 +61,7 @@ class HelloHandler(webapp2.RequestHandler):
 ```
 Notice that in this handler, we are defining how to respond with the GET method (`def get(self)`). This handler is perfect for getting data from the URL. 
 
-Now we have changed the handler so that it gets the name from the URL and passes it to the hello.html template.
+Now we have changed the handler so that it gets a variable 'name' from the URL and passes it to the hello.html template.
 
 #Conclusion
 Template variables are passed from the handler to the template as an argument in the render() function. The variables can either be a dictionary or a list. To get variables from a url, use `self.request.get()`.
