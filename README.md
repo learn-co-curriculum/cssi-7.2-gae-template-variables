@@ -65,3 +65,5 @@ Now we have changed the handler so that it gets a variable 'name' from the URL a
 
 #Conclusion
 Template variables are passed from the handler to the template as an argument in the render() function. The variables can either be a dictionary or a list. To get variables from a url, use `self.request.get()`.
+
+<a href='https://learn.co/lessons/cssi-7.2-gae-template-variables' data-visibility='hidden'>View this lesson on Learn.co</a>
